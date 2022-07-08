@@ -6,7 +6,34 @@
         xmlns:local="clr-namespace:TwentyOnePoints"
         mc:Ignorable="d"
         Title="MainWindow" Height="550" Width="1050" Background="#F5F5F5" ResizeMode="CanMinimize">
-    <Grid>
+    <Grid ShowGridLines="False">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
 
+
+        <StackPanel  Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="3">
+            <Label x:Name="label1" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="25,0,0,15"/>
+            <Canvas x:Name="canvas1" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Grid.RowSpan="3"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" Grid.RowSpan="3">
+            <Label x:Name="label2" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="25,0,0,15"/>
+            <Canvas x:Name="canvas2" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Grid.RowSpan="3"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="3" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button x:Name="button1" Content="Взять карту"  Click="button1_Click" Width="100" Height="25" Margin="0,0,0,20"/>
+            <Button x:Name="button2" Content="Обновить"  Click="button2_Click"  Width="100" Height="25" IsEnabled="False"/>
+        </StackPanel>
     </Grid>
 </Window>
